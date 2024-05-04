@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: functionreg
-        image: functionreg:1.2
+        image: functionreg:1.27
         ports:
         - containerPort: 8080

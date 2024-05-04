@@ -20,7 +20,9 @@ cd "$(dirname "$current_directory")"
 # Compress the current directory with a depth of 1 and exclude files/directories listed in ignore.txt
 tar -czf "$compressed_file" --exclude-from="$current_directory/ignore.txt" --directory="$current_directory" .
 
-url="localhost:8080/deploy"
+url="192.168.49.2:31863/deploy"
+# url="localhost:8080/deploy"
+
 
 curl_output=$(curl -X POST -F "code-compressed=@$compressed_file" "$url")
 echo "$curl_output"
