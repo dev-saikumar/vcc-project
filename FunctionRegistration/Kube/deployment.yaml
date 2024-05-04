@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: functionreg
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: functionreg
+  template:
+    metadata:
+      labels:
+        app: functionreg
+    spec:
+      containers:
+      - name: functionreg
+        image: functionreg:1.2
+        ports:
+        - containerPort: 8080

@@ -1,4 +1,3 @@
 ignore.txt
 node_modules
 deploy.sh
-package-lock.json

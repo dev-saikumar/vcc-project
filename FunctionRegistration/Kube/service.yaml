@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: functionreg
+spec:
+  selector:
+    app: functionreg
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
